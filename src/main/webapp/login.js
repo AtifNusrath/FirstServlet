@@ -1,7 +1,7 @@
-let name = document.getElementById('#name');
+const name = document.getElementById('#name');
 let textError = document.getElementsByClassName('.text-error');
 name.addEventListener('input',function(){
-    let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
+    let nameRegex = RegExp('^[A-Z][a-z]{3,}$');
     if(nameRegex.test(name)){
         textError.textContent="";
         return;
